@@ -1,0 +1,27 @@
+<div class="navbar">
+  <h2 id="home"><%= link_to "Simple Airbnb", flats_path %></h2>
+
+  <div id="right-side">
+    <div id="navbar-search">
+      <%= form_for(@flats.name) do |f| %>
+        <div id="search-text">
+          <%= f.text_field :name, placeholder: "Search" %>
+        </div>
+        <div id="form-btn">
+          <%= f.submit "Search" %>
+        </div>
+      <% end %>
+      <button id="btn-add-flat"><%= link_to "Add Flat", new_flat_path %></button>
+    </div>
+  </div>
+</div>
+
+<h1>All our Flats</h1>
+<p>All <%= @flats.count %> flats.</p>
+
+<% @flats.each do |flat| %>
+  <h1><%= flat.name %></h1>
+  <%= flat.address %>
+  <%= flat.price_per_night %>
+  <%= flat.number_of_guests %>
+<% end %>
