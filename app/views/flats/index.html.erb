@@ -20,8 +20,18 @@
 <p>All <%= @flats.count %> flats.</p>
 
 <% @flats.each do |flat| %>
-  <h1><%= flat.name %></h1>
-  <%= flat.address %>
-  <%= flat.price_per_night %>
-  <%= flat.number_of_guests %>
+  <div class="card-flat">
+    <%= image_tag "/assets/home decor items.png" %>
+    <div class="card-infos">
+      <div>
+        <h2><%= flat.name %></h2>
+        <p><%= flat.description %></p>
+      </div>
+      <div class="card-bottom">
+        <h2 class="card-flat-guests">👩‍👦‍👦<%= flat.number_of_guests %></h2>
+        <h2 class="card-flat-pricing">£<%= flat.price_per_night %></h2>
+        <h2><%= link_to "More info ", flat_path(flat.id) %><%= link_to "Edit ", edit_flat_path(flat.id) %><%= link_to "Remove", destroy_path(flat.id)  %></h2>
+      </div>
+    </div>
+  </div>
 <% end %>
