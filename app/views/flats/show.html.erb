@@ -1,0 +1,39 @@
+<div class="navbar">
+  <h2 id="home"><%= link_to "Simple Airbnb", flats_path %></h2>
+
+  <div id="right-side">
+    <div id="navbar-search">
+      <%= form_for(@flats.name) do |f| %>
+        <div id="search-text">
+          <%= f.text_field :name, placeholder: "Search" %>
+        </div>
+        <div id="form-btn">
+          <%= f.submit "Search" %>
+        </div>
+      <% end %>
+      <button id="btn-add-flat"><%= link_to "Add Flat", new_flat_path %></button>
+    </div>
+  </div>
+</div>
+<%# image %>
+<div class="banner">
+  <%= image_tag "/assets/home decor items.png" %>
+</div>
+<%# extra info %>
+<div class="row">
+    <div class="col-8">
+      <div class="flat-show-card">
+        <h1><%= @flat.name %></h1>
+        <p class="flat-show-address"><%= @flat.address %></p>
+      </div>
+      <div class="flat-description-card">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+      <div class="details">
+        <h1>Details</h1>
+        <h3>👩‍👦‍👦<%= @flat.number_of_guests %></h3>
+        <h3>£<%= @flat.price_per_night %></h3>
+      </div>
+    </div>
+</div>

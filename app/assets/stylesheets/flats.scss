@@ -126,3 +126,47 @@ a:hover {
   bottom: -60px;
   width: 200px;
 }
+
+// show page
+img {
+  width: 100%;
+  height: auto;
+}
+.flat-description-card {
+  background: #F8F9FA;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  position: absolute;
+  left: 60px;
+  width: 600px;
+  top: 100px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.flat-show-card {
+  background: #F8F9FA;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  position: absolute;
+  left: 60px;
+  width: 600px;
+  top: -100px;
+}
+.details {
+  background: #F8F9FA;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  position: absolute;
+  left: 750px;
+  width: 200px;
+  top: -100px;
+}
