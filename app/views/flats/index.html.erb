@@ -30,7 +30,7 @@
       <div class="card-bottom">
         <h2 class="card-flat-guests">👩‍👦‍👦<%= flat.number_of_guests %></h2>
         <h2 class="card-flat-pricing">£<%= flat.price_per_night %></h2>
-        <h2><%= link_to "More info ", flat_path(flat.id) %><%= link_to "Edit ", edit_flat_path(flat.id) %><%= link_to "Remove", destroy_path(flat.id)  %></h2>
+        <h2><%= link_to "More info ", flat_path(flat.id) %><%= link_to "Edit ", edit_flat_path(flat.id) %><%= link_to "Remove", flat_path(flat.id), method: :delete  %></h2>
       </div>
     </div>
   </div>

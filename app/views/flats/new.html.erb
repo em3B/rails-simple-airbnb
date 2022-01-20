@@ -1,0 +1,50 @@
+<div class="navbar">
+  <h2 id="home"><%= link_to "Simple Airbnb", flats_path %></h2>
+
+  <div id="right-side">
+    <div id="navbar-search">
+      <%= form_for(@flats.name) do |f| %>
+        <div id="search-text">
+          <%= f.text_field :name, placeholder: "Search" %>
+        </div>
+        <div id="form-btn">
+          <%= f.submit "Search" %>
+        </div>
+      <% end %>
+      <button id="btn-add-flat"><%= link_to "Add Flat", new_flat_path %></button>
+    </div>
+  </div>
+</div>
+<%# form %>
+<div id="form">
+  <h1>New Flat</h1>
+  <%= form_for(@flat, class: 'form') do |f| %>
+    <div id="form-name">
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name %>
+    </div>
+    <div id="form-address">
+      <%= f.label :address, "Address" %>
+      <%= f.text_field :address %>
+    </div>
+    <div id="form-pic">
+      <%= f.label :attr, "Picture url" %>
+      <%= f.text_field :attr %>
+    </div>
+    <div id="form-description">
+      <%= f.label :description, "Description" %>
+      <%= f.text_area :description, data: { editor: 'markdown' }, rows: 10 %>
+    </div>
+    <div id="form-guests">
+      <%= f.label :number_of_guests, "Number of Guests" %>
+      <%= f.text_field :number_of_guests %>
+    </div>
+    <div id="form-price">
+      <%= f.label :price_per_night, "Price per Night" %>
+      <%= f.text_field :price_per_night %>
+    </div>
+    <div id="form-button">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

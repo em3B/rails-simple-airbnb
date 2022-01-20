@@ -12,6 +12,7 @@ class FlatsController < ApplicationController
 
   def new
     @flat = Flat.new
+    @flats = Flat.all
   end
 
   def edit
